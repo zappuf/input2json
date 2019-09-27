@@ -3,3 +3,20 @@
 .headroom{
   margin-top: 25px;
 }
+
+.display-4 {
+  font-size: 3.2rem;
+}
+
+a:hover {
+  transition-duration: 0.15s;
+  text-decoration: none;
+}
+
+a {
+  transition-duration: 0.3s;
+}
+
+.gray {
+  color: #888888;
+}

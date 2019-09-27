@@ -1,11 +1,24 @@
 /*javascript for generating JSON from form input*/
 
+// Find our form in the DOM using its class name.
+const form = document.getElementByClassName('.contact-form')[0];
+
+// Get the form data with our (yet to be defined) function.
+const data = getFormDataAsJSON(form);
+
+// Do something with the email address.
+doSomething(data.email);
+
+
 /**
  * A handler function to prevent default submission and run our custom script.
  * @param  {Event} event  the submit event triggered by the user
  * @return {void}
  */
 const handleFormSubmit = event => {
+
+  const form = document.getElementsByClassName('contact-form')[0];
+  form.addEventListener('submit', handleFormSubmit);
 
   // Stop the form from submitting since we’re handling that with AJAX.
   event.preventDefault();
