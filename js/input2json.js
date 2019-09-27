@@ -10,6 +10,7 @@ const data = getFormDataAsJSON(form);
 doSomething(data.email);
 
 
+console.log("The input2json file is reached")
 /**
  * A handler function to prevent default submission and run our custom script.
  * @param  {Event} event  the submit event triggered by the user

@@ -20,3 +20,7 @@ a {
 .gray {
   color: #888888;
 }
+
+.jumbotron{
+  border-radius: .4rem;
+}
