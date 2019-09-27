@@ -4,6 +4,10 @@
   margin-top: 25px;
 }
 
+.marb{
+  margin-bottom: 50px;
+}
+
 .display-4 {
   font-size: 3.2rem;
 }
@@ -23,4 +27,9 @@ a {
 
 .jumbotron{
   border-radius: .4rem;
+}
+
+pre {
+  background-color: #eeeeee;
+  border-radius: 7px;
 }

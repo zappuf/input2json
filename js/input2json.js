@@ -1,16 +1,18 @@
 /*javascript for generating JSON from form input*/
 
-// Find our form in the DOM using its class name.
-const form = document.getElementByClassName('.contact-form')[0];
+/**
+ * Retrieves input data from a form and returns it as a JSON object.
+ * @param  {HTMLFormControlsCollection} elements  the form elements
+ * @return {Object}                               form data as an object literal
+ */
+const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 
-// Get the form data with our (yet to be defined) function.
-const data = getFormDataAsJSON(form);
+  data[element.name] = element.value;
+  return data;
 
-// Do something with the email address.
-doSomething(data.email);
+}, {});
 
 
-console.log("The input2json file is reached")
 /**
  * A handler function to prevent default submission and run our custom script.
  * @param  {Event} event  the submit event triggered by the user
@@ -18,14 +20,11 @@ console.log("The input2json file is reached")
  */
 const handleFormSubmit = event => {
 
-  const form = document.getElementsByClassName('contact-form')[0];
-  form.addEventListener('submit', handleFormSubmit);
-
   // Stop the form from submitting since we’re handling that with AJAX.
   event.preventDefault();
 
-  // TODO: Call our function to get the form data.
-  const data = {};
+  const data = formToJSON(form.elements);
+  // const data = {"key": "value", "next-version": "will populate from the form"};
 
   // Demo only: print the form data onscreen as a formatted JSON object.
   const dataContainer = document.getElementsByClassName('results__display')[0];
@@ -35,3 +34,6 @@ const handleFormSubmit = event => {
 
   // ...this is where we’d actually do something with the form data...
 };
+
+const form = document.getElementsByClassName('contact-form')[0];
+form.addEventListener('submit', handleFormSubmit);

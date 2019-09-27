@@ -33,11 +33,9 @@
           <form class="contact-form">
             <div class="col-6 form-group contact-form__input-group">
               <label class="contact-form__label" for="email">Email address:</label>
-              <input type="email" class="form-control contact-form__input contact-form__input--email" id="email" aria-describedby="emailHelp" placeholder="your_name@jax.org">
+              <input type="email" class="form-control contact-form__input contact-form__input--email" name="email" id="email" aria-describedby="emailHelp" placeholder="your_name@jax.org">
               <small id="emailHelp" class="form-text text-muted">Please enter your jax email.</small>
             </div>
-
-
 
 
         <div class="form-group contact-form__input-group">
@@ -50,18 +48,18 @@
 
         <div class="form-group contact-form__input-group col-4">
           <label class="contact-form__input-group" for="actionType">Please select your request type</label>
-            <select class="browser-default custom-select contact-form__input contact-form__input--select" id="actionType">
+            <select class="browser-default custom-select contact-form__input contact-form__input--select" name="action" id="actionType">
               <option selected>Open this select menu</option>
               <option value="archive">Archive</option>
               <option value="retrieve">Retrieve</option>
-              <option value="something_else">something else</option>
+              <option value="something_else_you_desire">something else you desire</option>
             </select>
         </div>
 
 
         <div class="form-check">
         </div>
-        <input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7"/>
+        <!-- <input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7"/> -->
         <button type="submit" class="contact-form__button btn btn-primary">Submit</button>
       </form>
         </div>
@@ -75,7 +73,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-11">
+        <div class="col-md-11 marb">
           <p>Don't trust this form, validate the output using <a href="https://jsonlint.com" target="_blank">JSONlint</a>.
             Paste the output above in the
             form at JSONlint to validate this JSON.</p>
@@ -84,7 +82,7 @@
 
 
       <!-- Below is useful stuff to be deleted at a later time -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-4">
           <section class="content">
             <p class="content__lede">Use this handy form to get JSON for your Archived Path</p>
@@ -117,7 +115,10 @@
             <pre class="results__display-wrapper"><code class="results__display"></code></pre>
           </div>
         </div>
-      </div>
+      </div> -->
+
+
+
     </div>
 
     <!-- Optional JavaScript -->
