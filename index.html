@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>JSON generator</title>
   </head>
   <body>
-    <!-- <h1 class="text-center headroom">Give me input and I'll make JSON! <span class="badge badge-secondary">New</span></h1> -->
     <div class="container">
       <div class="jumbotron headroom">
         <h1 class="display-4">Give me input and I'll make JSON! <span class="badge badge-secondary">New</span></h1>
@@ -27,7 +27,6 @@
         <a class="btn btn-primary btn-lg" href="#" title="Just kidding, this goes nowhere for now" role="button">Learn more</a>
       </div>
 
-
       <div class="row">
         <div class="col-md-11">
           <form class="contact-form">
@@ -36,7 +35,6 @@
               <input type="email" class="form-control contact-form__input contact-form__input--email" name="email" id="email" aria-describedby="emailHelp" placeholder="your_name@jax.org">
               <small id="emailHelp" class="form-text text-muted">Please enter your jax email.</small>
             </div>
-
 
         <div class="form-group contact-form__input-group">
           <label class="contact-form__input-group" for="archivedPath">Archived Path: <span class="gray">Do not enter a newline.
@@ -56,10 +54,8 @@
             </select>
         </div>
 
-
         <div class="form-check">
         </div>
-        <!-- <input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7"/> -->
         <button type="submit" class="contact-form__button btn btn-primary">Submit</button>
       </form>
         </div>
@@ -74,51 +70,12 @@
       </div>
       <div class="row">
         <div class="col-md-11 marb">
-          <p>Don't trust this form, validate the output using <a href="https://jsonlint.com" target="_blank">JSONlint</a>.
-            Paste the output above in the
-            form at JSONlint to validate this JSON.</p>
+          <p>Don't trust this form, validate the output using <a href="https://jsonlint.com" target="_blank">
+            JSONlint <span class="fa fa-external-link"></span></a>.
+            Paste everything (including the curly braces) in the output above into the
+            form at <a href="https://jsonlint.com" target="_blank">JSONlint</a> to validate this JSON.</p>
         </div>
       </div>
-
-
-      <!-- Below is useful stuff to be deleted at a later time -->
-      <!-- <div class="row">
-        <div class="col-4">
-          <section class="content">
-            <p class="content__lede">Use this handy form to get JSON for your Archived Path</p>
-            <form class="content__form">
-              <div class="contact-form__input-group">
-                <label class="contact-form__label" for="name">Full Name</label>
-                <input class="contact-form__input contact-form__input--text" id="name" name="name" type="text"/>
-              </div>
-              <div class="contact-form__input-group">
-                <label class="contact-form__label" for="email">Email Address</label>
-                <input class="contact-form__input contact-form__input--email" id="email" name="email" type="email"/>
-              </div>
-              <div class="contact-form__input-group">
-                <label class="contact-form__label" for="subject">How can I help you?</label>
-                <select class="contact-form__input contact-form__input--select" id="subject" name="subject">
-                  <option>I have a problem.</option>
-                  <option>I have a general question.</option>
-                </select>
-              </div>
-              <div class="contact-form__input-group">
-                <label class="contact-form__label" for="message">Enter a Message</label>
-                <textarea class="contact-form__input contact-form__input--textarea" id="message" name="message" rows="2" cols="65"></textarea>
-              </div>
-              <input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7"/>
-              <button class="contact-form__button btn btn-primary" type="submit">Make JSON</button>
-            </form>
-          </section>
-          <div class="results">
-            <h2 class="results__heading">JSON Output</h2>
-            <pre class="results__display-wrapper"><code class="results__display"></code></pre>
-          </div>
-        </div>
-      </div> -->
-
-
-
     </div>
 
     <!-- Optional JavaScript -->

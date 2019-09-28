@@ -5,12 +5,71 @@
  * @param  {HTMLFormControlsCollection} elements  the form elements
  * @return {Object}                               form data as an object literal
  */
+
+ // const formToJSON_deconstructed = elements => {
+ //
+ //   // This is the function that is called on each element of the array.
+ //   const reducerFunction = (data, element) => {
+ //
+ //     // Add the current field to the object.
+ //     data[element.name] = element.value;
+ //
+ //     // For the demo only: show each step in the reducer’s progress.
+ //     console.log(JSON.stringify(data));
+ //
+ //     return data;
+ //   };
+ //
+ //   // This is used as the initial value of `data` in `reducerFunction()`.
+ //   const reducerInitialValue = {};
+ //
+ //   // To help visualize what happens, log the inital value.
+ //   console.log('Initial `data` value:', JSON.stringify(reducerInitialValue));
+ //
+ //   // Now we reduce by `call`-ing `Array.prototype.reduce()` on `elements`.
+ //   const formData = [].reduce.call(elements, reducerFunction, reducerInitialValue);
+ //
+ //   // The result is then returned for use elsewhere.
+ //   return formData;
+ // };
+
+// const formToJSON = elements => [].reduce.call(elements, (data, element) => {
+//
+//   data[element.name] = element.value;
+//   return data;
+//
+// }, {});
+
+const isValidElement = element => {
+  return element.name && element.value;
+};
+
 const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 
-  data[element.name] = element.value;
-  return data;
+  // Make sure the element has the required properties.
+  if (isValidElement(element)) {
+    data[element.name] = element.value;
+  }
 
+  return data;
 }, {});
+
+
+//
+//
+// const formToJSON = elements => {
+//
+// // This is the function that is called on each element of the array.
+// const reducerFunction = (data, element) => {
+//
+//   // Add the current field to the object.
+//   data[element.name] = element.value;
+//
+//   // For the demo only: show each step in the reducer’s progress.
+//   console.log(JSON.stringify(data));
+//
+//   return data;
+// };
 
 
 /**
