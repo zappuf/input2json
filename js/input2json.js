@@ -85,7 +85,6 @@ const handleFormSubmit = event => {
   const data = formToJSON(form.elements);
   // const data = {"key": "value", "next-version": "will populate from the form"};
 
-  // Demo only: print the form data onscreen as a formatted JSON object.
   const dataContainer = document.getElementsByClassName('results__display')[0];
 
   // Use `JSON.stringify()` to make the output valid, human-readable JSON.
@@ -96,3 +95,26 @@ const handleFormSubmit = event => {
 
 const form = document.getElementsByClassName('contact-form')[0];
 form.addEventListener('submit', handleFormSubmit);
+
+
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+// Start file download.
+document.getElementById("dwn-btn").addEventListener("click", function(){
+    // Generate download of hello.txt file with some content
+    var text = document.getElementById("text-val").value;
+    var filename = "hello.json";
+
+    download(filename, text);
+}, false);

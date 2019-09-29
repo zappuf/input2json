@@ -47,7 +47,7 @@
         <div class="form-group contact-form__input-group col-4">
           <label class="contact-form__input-group" for="actionType">Please select your request type</label>
             <select class="browser-default custom-select contact-form__input contact-form__input--select" name="action" id="actionType">
-              <option selected>Open this select menu</option>
+              <option selected></option>
               <option value="archive">Archive</option>
               <option value="retrieve">Retrieve</option>
               <option value="something_else_you_desire">something else you desire</option>
@@ -69,11 +69,19 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-11 marb">
+        <div class="col-md-11">
           <p>Don't trust this form, validate the output using <a href="https://jsonlint.com" target="_blank">
             JSONlint <span class="fa fa-external-link"></span></a>.
             Paste everything (including the curly braces) in the output above into the
             form at <a href="https://jsonlint.com" target="_blank">JSONlint</a> to validate this JSON.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5 marb">
+          <p>If you would like to download a .json file of the JSON output above, copy and paste the JSON output into
+            the text atrea below and then click the download button.</P>
+          <textarea id="text-val" rows="4">This is the content of my file</textarea><br/>
+          <input class="btn btn-primary" type="button" id="dwn-btn" value="Download .json file"/>
         </div>
       </div>
     </div>
