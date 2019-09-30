@@ -37,3 +37,7 @@ pre {
 .bgcolor{
   background-color: #fffafa;
 }
+
+textarea{
+  border-radius: 5px;
+}
