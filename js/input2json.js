@@ -112,9 +112,15 @@ function download(filename, text) {
 
 // Start file download.
 document.getElementById("dwn-btn").addEventListener("click", function(){
-    // Generate download of hello.txt file with some content
+    var currentDate = new Date();
+    var year = currentDate.getFullYear();
+    var month = currentDate.getMonth();
+    var date = currentDate.getDate();
+    var timestamp = currentDate.getTime();
+    var action = document.getElementById("actionType").value;
+    // Generate download file with some content
     var text = document.getElementById("text-val").value;
-    var filename = "hello.json";
+    var filename = year + "-" + (month+1) + "-" + date + "-" + timestamp + "_" + action + ".json";
 
     download(filename, text);
 }, false);
